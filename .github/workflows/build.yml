@@ -102,7 +102,7 @@ jobs:
           tar xzvf "$pkgname.tar.gz"
           echo "::endgroup::"
           cmake -S "$pkgname" -B "build/" --toolchain "$PWD/$pkgname/cppwinrt/cross-mingw-toolchain.cmake" \
-            -DCMAKE_SYSTEM_PROCESSOR=i686 \
+            -DCMAKE_SYSTEM_PROCESSOR=x86_64 \
             -DCMAKE_BUILD_TYPE=Release \
             -DCMAKE_CXX_FLAGS="-static" \
             -DCMAKE_INSTALL_PREFIX="/$pkgname-win32" \
